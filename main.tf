@@ -37,7 +37,8 @@ resource "aws_iam_policy" "dynamodb_policy" {
       {
         Action   = [
           "dynamodb:GetItem",
-          "dynamodb:PutItem"
+          "dynamodb:PutItem",
+          "dynamodb:UpdateItem"
         ],
         Effect   = "Allow",
         Resource = aws_dynamodb_table.chore_assignments.arn
